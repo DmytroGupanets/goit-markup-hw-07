@@ -20,11 +20,22 @@
 }
 
 /* Our address and contacts*/
+
+.address__list {
+  list-style: none;
+}
+
 .address__location {
   display: inline-block;
   margin-bottom: 9px;
 
   color: $mainWhiteColor;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $mainAccentColor;
+  }
 }
 
 .address__contacts {

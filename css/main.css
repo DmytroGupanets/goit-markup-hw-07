@@ -699,10 +699,18 @@ body {
 }
 
 /* Our address and contacts*/
+.address__list {
+  list-style: none;
+}
+
 .address__location {
   display: inline-block;
   margin-bottom: 9px;
   color: #ffffff;
+  text-decoration: none;
+}
+.address__location:hover, .address__location:focus {
+  color: #2196f3;
 }
 
 .address__contacts {
