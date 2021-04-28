@@ -1,22 +1,20 @@
 .features {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+
   @extend %list;
 }
 
 .features__item {
-  display: block;
-  width: 270px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  margin-right: 30px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 
 .features__icon {
-  display: block;
   padding: 25px 100px;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: $greyColor;
   border-radius: 4px;

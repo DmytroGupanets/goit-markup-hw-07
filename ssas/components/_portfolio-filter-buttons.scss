@@ -5,7 +5,7 @@
   @extend %list;
 }
 
-.filter__item:not(:nth-child(5n)) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 

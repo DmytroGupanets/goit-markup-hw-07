@@ -1,10 +1,14 @@
 .clients {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+
   @extend %list;
 }
 
-.clients__item:not(:last-child) {
+.clients__item {
   margin-right: 30px;
+  flex-basis: calc((100% - 180px) / 6);
 }
 
 .clients__link {
@@ -12,7 +16,6 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 72px;
   fill: $mainIconColor;
 

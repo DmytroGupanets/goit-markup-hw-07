@@ -447,7 +447,7 @@ body {
   margin-right: auto;
   background-repeat: no-repeat;
   background-position: center;
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
@@ -486,21 +486,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .features__item {
-  display: block;
-  width: 270px;
-}
-.features__item:not(:last-child) {
   margin-right: 30px;
+  -ms-flex-preferred-size: calc((100% - 120px) / 4);
+      flex-basis: calc((100% - 120px) / 4);
 }
 
 .features__icon {
-  display: block;
   padding: 25px 100px;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -531,16 +531,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .services__item {
   position: relative;
-}
-.services__item:not(:last-child) {
   margin-right: 30px;
+  -ms-flex-preferred-size: calc((100% - 90px) / 3);
+      flex-basis: calc((100% - 90px) / 3);
 }
 
 .services__title {
@@ -572,18 +572,20 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-right: -30px;
+  text-align: center;
 }
 
 .our-team__card {
   padding-bottom: 30px;
+  margin-right: 30px;
+  -ms-flex-preferred-size: calc((100% - 120px) / 4);
+      flex-basis: calc((100% - 120px) / 4);
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.our-team__card:not(:last-child) {
-  margin-right: 30px;
 }
 
 .our-team__name {
@@ -593,14 +595,12 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .our-team__position {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 /* Our team card social link icons */
@@ -644,10 +644,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -30px;
 }
 
-.clients__item:not(:last-child) {
+.clients__item {
   margin-right: 30px;
+  -ms-flex-preferred-size: calc((100% - 180px) / 6);
+      flex-basis: calc((100% - 180px) / 6);
 }
 
 .clients__link {
@@ -660,7 +665,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
   height: 72px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
@@ -701,6 +705,7 @@ body {
 /* Our address and contacts*/
 .address__list {
   list-style: none;
+  font-style: normal;
 }
 
 .address__location {
@@ -708,6 +713,8 @@ body {
   margin-bottom: 9px;
   color: #ffffff;
   text-decoration: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__location:hover, .address__location:focus {
   color: #2196f3;
@@ -718,9 +725,11 @@ body {
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__contacts:hover, .address__contacts:focus {
-  color: #ffffff;
+  color: #2196f3;
 }
 
 /* JOIN US SECTION */
@@ -744,8 +753,8 @@ body {
           align-items: center;
 }
 
-.social-contacts__item:not(:first-child) {
-  margin-left: 10px;
+.social-contacts__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-contacts__link {
@@ -862,7 +871,6 @@ body {
   right: 8px;
   top: 8px;
   padding: 0;
-  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 30px;
@@ -983,7 +991,6 @@ body {
 }
 
 .agreement-field__icon {
-  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -1049,7 +1056,7 @@ body {
   margin-bottom: 50px;
 }
 
-.filter__item:not(:nth-child(5n)) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -1089,8 +1096,8 @@ body {
 }
 
 .example__card {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
+  -ms-flex-preferred-size: calc((100% - 90px) / 3);
+      flex-basis: calc((100% - 90px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
