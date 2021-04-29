@@ -11,13 +11,20 @@
   flex-basis: calc((100% - 120px) / 4);
 }
 
-.features__icon {
-  padding: 25px 100px;
+.features__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   width: 100%;
   height: 120px;
   background-color: $greyColor;
   border-radius: 4px;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features__title {

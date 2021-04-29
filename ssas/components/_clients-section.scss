@@ -1,13 +1,13 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
 
   @extend %list;
 }
 
 .clients__item {
-  margin-right: 30px;
+  margin-left: 30px;
   flex-basis: calc((100% - 180px) / 6);
 }
 
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
 
-  height: 72px;
+  height: 92px;
   fill: $mainIconColor;
 
   border: 1px solid $mainIconColor;
