@@ -109,7 +109,8 @@
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .form-field__input-area:focus-within & {
+  .form-field__input-area:focus-within &,
+  .form-field__input-area:hover & {
     fill: $mainAccentColor;
   }
 }
@@ -123,7 +124,8 @@
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:focus-within {
+  &:focus-within,
+  &:hover {
     border: 1px solid $mainAccentColor;
     outline: none;
   }
